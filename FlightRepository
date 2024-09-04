@@ -1,0 +1,13 @@
+package com.example.demo.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.example.demo.model.FlightResponse;
+
+@Repository
+public interface FlightRepository extends JpaRepository<FlightResponse,Integer>{
+    List<FlightResponse> findByFromLocationAndToLocation(String fromLocation,String toLocation);
+}

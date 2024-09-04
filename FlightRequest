@@ -1,0 +1,24 @@
+package com.example.demo.model;
+
+public class FlightRequest {
+    private String fromLocation;
+    private String toLocation;
+    public FlightRequest() {
+    }
+    public String getFromLocation() {
+        return fromLocation;
+    }
+    public String getToLocation() {
+        return toLocation;
+    }
+    public FlightRequest(String fromLocation, String toLocation) {
+        this.fromLocation = fromLocation;
+        this.toLocation = toLocation;
+    }
+    public void setFromLocation(String fromLocation) {
+        this.fromLocation = fromLocation;
+    }
+    public void setToLocation(String toLocation) {
+        this.toLocation = toLocation;
+    }
+}

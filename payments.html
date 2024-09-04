@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payemnts</title>
+    <link rel="stylesheet" href="style1.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+        <div class="bewdee">
+            <h1>THANK YOU!</h1>
+            <p>Awesome! All set for your trip to <span id="toLocation"></span></p>
+                 <p>You're flying from <span id="airportName">airportName</span> to <span id="airportDestinationName"></span></p>
+                 
+    </div>
+    <select id="select-box">
+        <option value="none">Select an option</option>
+        <option value="box1">UPI</option>
+        <option value="box2">PAY LATER</option>
+        <option value="box3">SBI BANK</option>
+      </select>
+      
+      <div id="box1" class="box">
+        <!-- <div class="randa">
+            <h1>Scan through UPI</h1>
+            <form class="payment-form">
+                <input type="text" id="receiver" placeholder="Receiver ID" required>
+                <input type="number" id="amount" placeholder="4000" required>
+                <button id="payButton">Pay</button>
+                
+        </div>
+      
+      <div id="qrCodeContainer">
+        <img id="qrCodeImage" src="qr.png" alt="QR Code">
+      </div> 
+         -->
+    </div>
+      
+      <div id="box2" class="box">
+        <div class="rampoffer2">
+          <form class="form" method="post" action="status.html">
+            <div class="joker2">
+            <div class="joker">
+              <label>Your name</label>
+              <br>
+              <input type="text" id="yourname" name="yourname" required>
+              <br>
+              <label>Your College Provided Email</label>
+              <br>
+              <input type="email" id="email" name="email" required>
+              <br>
+              <label>Your College Provided rollno</label>
+              <br>
+              <input type="text" id="rollno" name="rollno" required>
+              <br>
+              <label>Your College name</label>
+              <br>
+              <input type="text" id="collegename" name="collegename" required>
+              <br>
+              <label>Your Contact number</label>
+              <br>
+              <input type="contact" id="contact" name="contact" required>
+              <a href="status.html"><button type="submit" onclick="saveData()">Register</button></a>
+              <br>
+            
+            </div>
+              
+              <div class="joker3">
+                
+                <label>pan card number</label>
+                <br>
+                <input type="text" id="pancard" name="pancard" required>
+                <br>
+                <label>Aadhar Card number</label>
+                <br>
+                <input type="contact" id="aadharcard" name="aadharcard" required>
+              <br>
+                
+                <label>money need for the trip?</label>
+                <br>
+                <input type="number" id="money" name="money" required>
+                <br>
+                <label>For how many months?</label>
+                <br>
+                <input type="number" id="monthend" name="monthend" required>
+
+                <br>
+         
+          
+              </div>
+              
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <div id="box3" class="box">
+        Content for Box 3
+      </div>
+        
+       
+
+</body>
+<script>
+  
+   
+
+
+
+
+// document.getElementById("payButton").addEventListener("click", function() {
+//     var qrCodeContainer = document.getElementById("qrCodeContainer");
+//     qrCodeContainer.classList.toggle("show"); // Toggle the 'show' class
+//   });
+  
+  
+
+     document.getElementById('select-box').addEventListener('change', function() {
+  var selectedValue = this.value;
+  
+  // Hide all boxes
+  var boxes = document.querySelectorAll('.box');
+  boxes.forEach(function(box) {
+    box.classList.remove('show');
+  });
+
+  // Show the selected box
+  if (selectedValue !== 'none') {
+    var selectedBox = document.getElementById(selectedValue);
+    selectedBox.classList.add('show');
+  }
+});
+
+function saveData(){
+            let yourname,email,rollno,collegename,Contact,pancard,aadharcard,money,monthend;
+            yourname=document.getElementById("yourname").value;
+            rollno=document.getElementById("rollno").value;
+            collegename=document.getElementById("collegename").value;
+            contact=document.getElementById("contact").value;
+            pancard=document.getElementById("pancard").value;
+            aadharcard=document.getElementById("aadharcard").value; 
+            money=document.getElementById("money").value;
+            monthend=document.getElementById("monthend").value;
+            // password=document.getElementById("password").value;
+            console.log(yourname+ email);
+
+    }
+
+const formE1=document.querySelector('.form');
+    formE1.addEventListener('submit',event =>{
+        event.preventDefault();
+        window.location.href="status.html";
+        
+
+        const formData=new FormData(formE1);
+        const data=Object.fromEntries(formData);
+
+
+        fetch('http://localhost:8080/offer2',{
+        method:'POST',
+        headers:{
+        'Content-Type': 'application/json'
+        },
+        body:JSON.stringify(data)
+        }).then(res=>res.json())
+        .then(data=>console.log(data))
+        .catch(error=>console.log(error));
+
+
+    });
+
+
+    function saveData(){
+      let yourname,email,rollno,collegename,Contact,pancard,aadharcard,money,monthend;
+      yourname=document.getElementById("yourname").value;
+      email=document.getElementById("email").value;
+            rollno=document.getElementById("rollno").value;
+            collegename=document.getElementById("collegename").value;
+            contact=document.getElementById("contact").value;
+            pancard=document.getElementById("pancard").value;
+            aadharcard=document.getElementById("aadharcard").value; 
+            money=document.getElementById("money").value;
+            monthend=document.getElementById("monthend").value;
+            console.log(yourname+ email);
+            localStorage.setItem("email",email);
+            localStorage.setItem("yourname",yourname);
+            let user_records=new Array();
+            
+            user_records=JSON.parse(localStorage.getItem("userstool"))?JSON.parse(localStorage.getItem("userstool")):[]
+            if(user_records.some((v)=>{
+             return v.email=email
+            })){
+             alert("Duplicate Data");
+            }
+          user_records.push({
+                     "email":email,
+                     "yourname":yourname
+                 })
+             localStorage.setItem("userstool",JSON.stringify(user_records));
+             userrecords1=localStorage.setItem("yourname",yourname);
+             userrecords2=localStorage.setItem("email",email);
+             userrecords3=localStorage.setItem("rollno",rollno);
+             userrecords4=localStorage.setItem("collegename",collegename);
+             userrecords5=localStorage.setItem("contact",contact);
+             userrecords6=localStorage.setItem("pancard",pancard);
+             userrecords7=localStorage.setItem("aadharcard",aadharcard);
+             userrecords8=localStorage.setItem("money",money);
+             userrecords9=localStorage.setItem("monthend",monthend);
+
+
+
+    }
+
+
+
+var jsonData =JSON.parse( localStorage.getItem('from'));
+    console.log(jsonData);
+    // var receivedData = JSON.parse(jsonData);
+// Display the contents of the received object
+console.log(jsonData);
+var jsonData1 = localStorage.getItem('airportName');
+    console.log(jsonData1);
+   
+var jsonData2 = localStorage.getItem('toLocation');
+    console.log(jsonData2);
+    var jsonData3 = localStorage.getItem('airportDestinationName');
+    console.log(jsonData3);
+document.getElementById('airportName').innerHTML=jsonData1;
+document.getElementById('toLocation').innerHTML=jsonData2;
+document.getElementById('airportDestinationName').innerHTML=jsonData3;
+
+
+
+// // window.addEventListener("Load",()=>{
+// //     const value=localStorage.getItem("airportName");
+//     document.querySelector(".airportName").innerHTML= jsonData.airportName;
+
+// // })
+
+// var specificRowContainer = document.querySelector('airportName');
+// var specificRowContainer = document.getElementById('airportName').innerHTML=specificRowData.airportName;
+// var specificRowData = JSON.parse(localStorage.getItem('from'));
+// console.log(specificRowData);
+
+
+
+// // Check if data exists
+// if (specificRowData) {
+//   specificRowContainer.innerHTML = specificRowData;
+// } else {
+//   specificRowContainer.innerHTML = "No data found.";
+// }
+
+
+// var dataContainer = document.getElementById('airportName');
+//     dataContainer.innerHTML = `<h1>${jsonData}</h1>`;
+//     dataContainer.textContent = JSON.stringify(jsonData,null,2);
+
+
+
+
+
+
+
+
+</script>
+</html>

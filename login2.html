@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /* margin: 0;
+            padding: 0; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('OIP (6).jpeg');
+            background-position: center;
+            background-attachment: fixed;
+    background-size: cover; 
+    background-repeat: no-repeat;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.5);
+            padding-left:8px;
+            padding-right:8px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s, transform 0.3s;
+            
+        }
+
+        .login-container:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .login-container h2 {
+            text-align: center;
+            color: #000000;
+            font-size: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 4px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        
+            color: #000000;
+        }
+
+        .form-group input[type="email"],
+        .form-group input[type="password"] {
+            width: 105px;
+            padding: 4px;
+            outline: none;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input[type="email"]:focus,
+        .form-group input[type="password"]:focus {
+            border-color: #007bff;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 4px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form class="form" method="post" >
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <a href="payments.html">
+                <button type="submit" onclick="saveData()">Login</button>
+            </a>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    function saveData(){
+        let email,password;
+        email=document.getElementById("email").value;
+            password=document.getElementById("password").value;
+           let user_records=new Array();
+           user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+           if(user_records.some((v)=>{
+            return v.email==email && v.password==password;
+           })){
+            alert("Login Successfull")
+            let current_user=user_records.filter((v)=>{
+            return v.email==email && v.password==password;
+
+            })[0]
+
+            localStorage.setItem("password",current_user.password);
+            localStorage.setItem("email",current_user.email);
+            window.location.href="payments.html";
+           }
+           else{
+            alert("Login Fail");
+           }
+
+    }
+const formE1=document.querySelector('.form');
+    formE1.addEventListener('submit',event =>{
+        event.preventDefault();
+        // document.location.href="payments.html";
+
+        const formData=new FormData(formE1);
+        const data=Object.fromEntries(formData);
+
+
+        fetch('http://localhost:8080/login',{
+        method:'POST',
+        headers:{
+        'Content-Type': 'application/json'
+        },
+        body:JSON.stringify(data)
+        }).then(res=>res.json())
+        .then(data=>console.log(data))
+        .catch(error=>console.log(error));
+
+
+    });
+    
+
+
+</script>
+</html>

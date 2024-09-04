@@ -1,0 +1,144 @@
+package com.example.demo.model;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "offer2")
+public class OfferRequest {
+    @Column(name = "yourname")
+    private String yourname;
+    @Id
+    @Column(name = "email")
+    private String email;
+    @Column(name = "rollno")
+    private String rollno;
+    @Column(name = "collegename")
+    private String collegename;
+    @Column(name = "contact")
+    private String contact;
+    @Column(name = "pancard")
+    private String pancard;
+    @Column(name = "aadharcard")
+    private String aadharcard;
+    @Column(name = "money")
+    private String money;
+    @Column(name = "monthend")
+    private String monthend;
+    public OfferRequest(){
+
+    }
+   
+
+    public OfferRequest(String yourname, String email,String rollno,String collegename,String contact,String pancard,String aadharcard,String money,String monthend) {
+       
+        this.yourname = yourname;
+        this.email = email;
+        this.rollno = rollno;
+        this.collegename = collegename;
+        this.contact = contact;
+        this.pancard = pancard;
+        this.aadharcard=aadharcard;
+        this.money=money;
+        this.monthend=monthend;
+    }
+
+
+    public String getYourname() {
+        return yourname;
+    }
+
+
+    public String getEmail() {
+        return email;
+    }
+
+
+    public String getRollno() {
+        return rollno;
+    }
+
+
+    public String getCollegename() {
+        return collegename;
+    }
+
+
+    public String getContact() {
+        return contact;
+    }
+
+
+    public String getPancard() {
+        return pancard;
+    }
+
+
+    public String getMoney() {
+        return money;
+    }
+
+
+    public String getMonthend() {
+        return monthend;
+    }
+
+
+    public String getAadharcard() {
+        return aadharcard;
+    }
+    
+
+
+    public void setYourname(String yourname) {
+        this.yourname = yourname;
+    }
+
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+
+    public void setRollno(String rollno) {
+        this.rollno = rollno;
+    }
+
+
+    public void setCollegename(String collegename) {
+        this.collegename = collegename;
+    }
+
+
+    public void setContact(String contact) {
+        this.contact = contact;
+    }
+
+
+    public void setPancard(String pancard) {
+        this.pancard = pancard;
+    }
+
+
+    public void setAadharcard(String aadharcard) {
+        this.aadharcard = aadharcard;
+    }
+
+    
+    public void setMoney(String money) {
+        this.money = money;
+    }
+
+
+    public void setMonthend(String monthend) {
+        this.monthend = monthend;
+    }
+    
+
+
+
+    
+    
+}

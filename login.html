@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0px;
+        }
+        .registration{
+           background-color: aqua;
+           height: 135px;
+           width: 332px;
+           padding: 25px;
+        }
+        .A{
+            background-color: rgb(255, 255, 255);
+            height: 125px;
+            width: 200px;
+            margin-left: 75px;
+            display: flex;
+            
+            }
+            .B{
+                background-color: rgb(91, 80, 191);
+                height: 125px;
+                width: 100px;
+            }
+            .B h1{
+                font-size: 10px;
+                text-align: center;
+                padding: 2px;
+            }
+            .B p{
+                font-size: 6px;
+                margin-left: 2px;
+            }
+             .G{
+                font-size: 8px;
+                text-align: center;
+                margin-left: 8px;
+                border: 1px white solid;
+                background-color: white;
+                cursor:pointer;
+            }
+            .C h1{
+                color: rgb(0, 0, 0);
+                font-size: 10px;
+                margin-left: 10px;
+                padding-bottom: 1px;
+
+            }
+            .D label{
+              font-size: 8px;
+              margin-top: 5px;
+              padding-top: 3px;
+              color: rgb(0, 0, 0);
+              margin-left: 4px;
+                }
+            .D input{
+                height: 10px;
+                width: 40px;
+                font-size: 5px;
+                border: none;
+                outline: none;
+                margin-left: 2px;
+                border:1px solid black;
+                bottom: 15px;
+                
+            }
+            .L input{
+                height: 10px;
+                width: 40px;
+                border: none;
+                outline: none;
+                border: none;
+                font-size: 5px;
+                margin-left: 2px;
+                border:1px solid black;
+            }
+            .L label{
+                font-size: 8px;
+              margin-top: 5px;
+              padding-top: 3px;
+              color: rgb(0, 0, 0);
+              margin-left: 4px;
+            }
+            .N label{
+                font-size: 8px;
+              margin-top: 5px;
+              padding-top: 3px;
+              color: rgb(116, 72, 72);
+              
+              margin-left: 4px;
+            }
+            .N input{
+                height: 10px;
+                width: 40px;
+                border: none;
+                font-size: 5px;
+                outline: none;
+                border: none;
+                margin-left: 2px;
+                border:1px solid black;
+            }
+            .V label{
+                font-size: 8px;
+              margin-top: 5px;
+              
+              color: rgb(0, 0, 0);
+              margin-left: 20px;
+            }
+            .V input{
+                height: 10px;
+                width: 40px;
+               
+                font-size: 5px;
+                outline: none;
+                border: none;
+                
+                border:1px solid black;
+            }
+           
+            .E label{
+                font-size: 8px;
+              margin-top: 5px;
+              padding-top: 3px;
+              color: rgb(0, 0, 0);
+
+              margin-left: 5px;
+            }
+            .E input{
+                height: 10px;
+                width: 40px;
+                font-size: 5px;
+                border: none;
+                border: none;
+                outline: none;
+                margin-left: 5px;
+                border:1px solid black;
+            }
+                .X {
+                    display: flex;
+                    margin-left: 7px;
+                }
+                .O{
+                    display: flex;
+                    margin-left: 7px;
+                }
+                .V button{
+                    font-size: 8px;
+                    margin-left: 15px;
+                    border: none;
+                    padding: 2px;
+                    cursor: pointer;
+                    
+                }
+    </style>
+    
+</head>
+<body>
+    <div class="registration">
+        <div class="A">
+            <div class="B">
+                <h1>INFORMATION</h1>
+                <p>Registering on MakeMyTrip offers numerous benefits that enhance your travel experience. By creating an account, you gain access to exclusive deals, personalized recommendations, and seamless booking processes.!</p>
+                <a href="login2.html"><span class="G">Have An Account</span></a>
+            </div>
+            <div class="C">
+        <form class="form" action="payments.html" method="post">
+            <h1>Registration Form</h1>
+            <div class="X">
+            <div class="D">
+            <label>UserName</label>
+            <input type="text" id="username" name="username" required>
+        </div> 
+        <div class="E">
+            <label>FullName</label>
+            <input type="fullname" id="fullname" name="fullname" required>
+        </div>
+        </div> 
+        <div class="O">
+        <div class="N">
+            <label>contact</label>
+            <input type="contact" id="contact" name="contact" required>
+        </div>
+        <div class="L">
+            <label>Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+    </div>
+    <div class="V">
+            <label>Password</label>
+            
+            <input type="password" id="password" name="password" required>
+            <a href="payments.html">
+        <button type="submit" onclick="saveData()">Register</button>
+    </a>
+       
+            
+     
+        </div>
+
+        </form>
+    </div>
+    </div>
+    </div>
+</body>
+<script>
+        function saveData(){
+            let username,email,password;
+            username=document.getElementById("username").value;
+            email=document.getElementById("email").value;
+            password=document.getElementById("password").value;
+            console.log(username+email+password);
+            // localStorage.setItem("username",username);
+            localStorage.setItem("email",email);
+            localStorage.setItem("password",password);
+
+
+            let user_records=new Array();
+            
+           user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+           if(user_records.some((v)=>{
+            return v.email=email
+            return v.password=password
+           })){
+            alert("Duplicate Data");
+           }
+         user_records.push({
+                    "email":email,
+                    "password":password
+                })
+            localStorage.setItem("users",JSON.stringify(user_records));
+            window.location.href="payments.html";
+        }
+    
+
+    const formE1=document.querySelector('.form');
+    formE1.addEventListener('submit',event =>{
+        event.preventDefault();
+        
+
+        const formData=new FormData(formE1);
+        const data=Object.fromEntries(formData);
+
+
+        fetch('http://localhost:8080/register',{
+        method:'POST',
+        headers:{
+        'Content-Type': 'application/json'
+        },
+        body:JSON.stringify(data)
+        }).then(res=>res.json())
+        .then(data=>console.log(data))
+        .catch(error=>console.log(error));
+
+
+    });
+
+
+</script>
+</html>

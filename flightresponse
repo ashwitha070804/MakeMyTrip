@@ -1,0 +1,48 @@
+package com.example.demo.model;
+
+import java.time.LocalDateTime;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "planeinformation")
+public class FlightResponse {
+    @Id
+    @Column(name = "ID")
+    private int id;
+    @Column(name = "FROM")
+    private String fromLocation;
+    @Column(name = "TO")
+    private String toLocation;
+    @Column(name = "DEPARTURETIME")
+    private LocalDateTime departureTime;
+    @Column(name = "ARRIVALTIME")
+    private LocalDateTime arrivalTime;
+    @Column(name = "AMOUNT")
+    private Long amount;
+    @Column(name = "AIRPORTANME")
+    private String airportName;
+    @Column(name = "AIRPORTDESTINATIONNAME")
+    private String airportDestinationName;
+    @Column(name = "FLIGHTCODE")
+    private String flightCode;
+    
+    
+    
+    
+    
+    
+   
+    
+}

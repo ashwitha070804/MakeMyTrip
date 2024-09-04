@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>status</title>
+    <style>
+        .user-details{
+            font-size: 5px;
+            justify-content: space-between;
+        }
+     .user-details td:first-child{
+            font-size: 10px;
+            font-style: initial;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: red;
+            font-weight: bolder;
+     }
+    #yourname{
+        font-size: 8px;
+        font-weight: bolder;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-style: italic;
+    }
+    #email{
+        font-size: 8px;
+        font-weight: bolder;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-style: italic;
+    }
+    #collegename{
+        font-size: 8px;
+        font-weight: bolder;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-style: italic;
+    }
+    #contact{
+        font-size: 8px;
+        font-weight: bolder;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-style: italic;
+    }
+    #rollno{
+        font-size: 8px;
+        font-weight: bolder;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-style: italic;
+    }
+    #pancard{
+        font-size: 8px;
+        font-weight: bolder;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-style: italic;
+    }
+    #aadharcard{
+        font-size: 8px;
+        font-weight: bolder;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-style: italic;
+    }
+    #money{
+        font-size: 8px;
+        font-weight: bolder;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-style: italic;
+    }
+    #monthend{
+        font-size: 8px;
+        font-weight: bolder;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-style: italic;
+    }
+    #kuchnai{
+        font-size: 8px;
+        font-weight: bolder;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-style: italic;
+    }
+    .uno button{
+        font-size: 5px;
+    }
+    .uno h1{
+        text-align: center;
+        font-size: 8px;
+        color: red;
+    }
+    .header1{
+    /* background-color: rgb(58, 172, 172); */
+    background-image:linear-gradient(rgba(9,0,77,0.95),rgba(9,0,77,0.75)), url(goa-map.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: auto;
+    width: auto;
+    height: 75px;
+    position: relative;
+    filter: brightness(100%); 
+    
+}
+
+       
+    </style>
+</head>
+<body>
+    <div class="header1">
+        <div class="logo">
+          
+            <img src="r.png" alt="Logo" width="45px">
+            
+        </div>
+    </div>
+    <div class="uno">
+        <h1>Here is your payslip!</h1>
+    <table class="user-details">
+        <tr>
+            <td>Name:</td>
+            <td id="yourname">Loading...</td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td id="email">Loading...</td>
+        </tr>
+        <tr>
+            <td>CollegeName:</td>
+            <td id="collegename">Loading...</td>
+        </tr>
+        <tr>
+            <td>RollNo:</td>
+            <td id="rollno">Loading...</td>
+        </tr>
+        <tr>
+            <td>Contact:</td>
+            <td id="contact">Loading...</td>
+        </tr>
+        <tr>
+            <td>PanCard:</td>
+            <td id="pancard">Loading...</td>
+        </tr>
+        <tr>
+            <td>AadharCard:</td>
+            <td id="aadharcard">Loading...</td>
+        </tr>
+        <tr>
+            <td>BorrowedMoney:</td>
+            <td id="money">Loading...</td>
+        </tr>
+        <tr>
+            <td>MonthYouChoosed:</td>
+            <td id="monthend">Loading...</td>
+        </tr>
+        <tr>
+            <td>needtopaypermonth:</td>
+            <td id="kuchnai">Loading...</td>
+        </tr>
+        
+    </table>
+    <a href="welcome.html"><button>DONE</button></a>
+    
+</div>
+  
+      
+</body>
+<script>
+
+
+    var userrecords =JSON.parse( localStorage.getItem('userstool'));
+    console.log(userrecords);
+    // var receivedData = JSON.parse(jsonData);
+// Display the contents of the received object
+console.log(userrecords);
+var userrecords1 = localStorage.getItem('yourname');
+    console.log(userrecords1);
+   
+var userrecords2 = localStorage.getItem('email');
+    console.log(userrecords2);
+
+    var userrecords3 = localStorage.getItem('rollno');
+    console.log(userrecords3);
+    var userrecords4 = localStorage.getItem('collegename');
+    console.log(userrecords4);
+    var userrecords5 = localStorage.getItem('contact');
+    console.log(userrecords5);
+    var userrecords6 = localStorage.getItem('pancard');
+    console.log(userrecords6);
+    var userrecords7 = localStorage.getItem('aadharcard');
+    console.log(userrecords7);
+    var userrecords8 = localStorage.getItem('money');
+    console.log(userrecords8);
+    var userrecords9 = localStorage.getItem('monthend');
+    console.log(userrecords9);
+    var userrecords10=((localStorage.getItem('money')/localStorage.getItem('monthend'))+2000);
+    console.log(userrecords10);
+   
+document.getElementById('yourname').innerHTML=userrecords1;
+document.getElementById('email').innerHTML=userrecords2;
+document.getElementById('rollno').innerHTML=userrecords3;
+document.getElementById('collegename').innerHTML=userrecords4;
+document.getElementById('contact').innerHTML=userrecords5;
+document.getElementById('pancard').innerHTML=userrecords6;
+document.getElementById('aadharcard').innerHTML=userrecords7;
+document.getElementById('money').innerHTML=userrecords8;
+document.getElementById('monthend').innerHTML=userrecords9;
+document.getElementById('kuchnai').innerHTML=userrecords10;
+// document.getElementById('airportDestinationName').innerHTML=jsonData3;
+
+</script>
+</html>

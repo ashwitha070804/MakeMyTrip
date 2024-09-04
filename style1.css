@@ -1,0 +1,685 @@
+*{
+    margin: 0%;
+    
+     padding:0px;
+}
+.box-container{
+    height: auto;
+    width: 100%;
+    background-image:linear-gradient(rgba(9,0,77,0.165),rgba(9,0,77,1.5)), url(background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+.flight .bommahighlight{
+    width: 122px;
+    font-size: 7px;
+    transition: font-size 0.3s ease;
+}
+.flight .bommahighlight:hover{
+    font-size: 10px;
+}
+
+.logo-logo img{
+    width: 40px;
+    height: 15px;
+    padding: 5px;
+    padding-left: 55px;
+    filter: brightness(200%); 
+
+    
+}
+.texty .highlight{
+    font-size: 15px;
+    color: red;
+   
+}
+.texty .highlight1{
+    font-size: 7px;
+    color: rgb(55, 255, 0);
+}
+.lvda{
+    display: flex;
+    justify-content:space-evenly;
+    background-color: hsl(0, 0%, 0%);
+    margin-bottom: 2px;
+    border-radius: 5px;
+    padding: 1px;
+    width: 155px;
+    height: auto;
+    margin-left: 115px;
+    
+
+}
+.lvda span{
+    font-size: 5px;
+    color: aliceblue;
+}
+.texty h1{
+    font-size: 13px;
+    margin-top:4px ;
+    color: rgb(1, 1, 1);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 1000;
+    font-style: italic;
+    font-variant: initial;
+    margin-left: 15px;
+
+}
+.texty p{
+    font-size: 6px;
+    color: rgb(0, 0, 0);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 1000;
+    font-style: italic;
+    font-variant: initial;
+    margin-left: 15px;
+}
+.latkor{
+    width: auto;
+    background-color: rgb(0, 0, 0);
+    height: 70px;
+    margin-left: 105px;
+    margin-top: 2px;
+    background-color: rgba(255, 255, 255, 0)
+}
+.latkor h1{
+    font-size: 10px;
+    padding-left:10px;
+    color: rgb(255, 255, 255);
+    font-weight: 1000;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.latkor input{
+    font-size: 7.5px;
+    color: bisque;
+    background-color: rgba(121, 43, 124, 0.150);
+    border: none;
+    border-bottom: 1px solid #fff;
+    padding: 5px;
+    margin-left: 5px;
+    outline: none;
+
+}
+.offers button{
+    font-size: 8px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 5px;
+  margin-left: 155px;
+  cursor: pointer;
+}
+.offers h1{
+    font-size: 10px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 5px;
+    border: 1px solid ;
+    
+
+}
+.highlight2{
+    color: red;
+    font-weight: 1000;
+    font-size: 12px;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.anotherlatkor input{
+    font-size: 7.5px;
+    color: bisque;
+    background-color: rgba(121, 43, 124, 0.100);
+    border: none;
+    border-bottom: 1px solid #f3f3f3;
+    padding: 2px;
+    margin-left: 5px;
+    margin-right: 7px;
+    margin-top: 17px;
+
+}
+.ysoo{
+    display: flex;
+    justify-content: space-between;
+}
+.ediki button{
+    margin-left: 99px;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(184, 151, 177);
+    justify-content: center;
+    font-size: 10px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:1000;
+
+}
+.bomma img{
+    width: 50px;
+    height: 35px;
+    margin-left: 2px;
+    filter: brightness(2.656565546654684);
+}
+.footer{
+    background-color: rgb(106, 88, 88);
+    position: relative;
+    padding: 15px;
+    display: flex;
+    
+}
+.facebook{
+    margin-left: 5px;
+}
+.copyrights{
+    font-size: 5px;
+    text-align: right;
+    margin-left: 240px;
+}
+.questions{
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    display:flex;
+    border-bottom:solid 1px; 
+    
+    
+}
+.question1 h1{
+    font-size: 5px;
+}
+.question1 p{
+    font-size: 3.5px;
+    width: 155px;
+}
+.question2 h1{
+    font-size: 5px;
+    margin-left: 55px;
+}
+.question2 p{
+    font-size: 3.5px;
+    margin-left: 55px;
+}
+.questions2{
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    display:flex;
+}
+.question3 h1{
+    font-size: 5px;
+}
+.question3 p{
+    font-size: 3.5px;
+    width: 155px;
+}
+.question4 h1{
+    font-size: 5px;
+    margin-left: 55px;
+}
+.question4 p{
+    font-size: 3.5px;
+    margin-left: 55px;
+}
+.productlinks{
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+  display: block;
+    border-bottom:solid 1px; 
+    
+}
+.productlinks h2{
+    font-size:5.5px;
+    color: rgb(133, 169, 127);
+    padding-bottom: 1.5px;
+
+}.productlinks p{
+    font-size: 4px;
+    padding-bottom: 2.5px;
+    color: white;
+}
+.locations{
+    background-color: rgb(255, 255, 255);
+    padding: 35px;
+    padding-top: 15px;
+    
+}
+.locations1{
+    display: flex;
+}
+.hyd{
+    width: auto;
+    display: flex;
+}
+.hyd img{
+        width: 25px;
+        height: 20px;
+}
+.loc1 h3{
+    font-size: 5px;
+}
+.loc1 p{
+    font-size: 5px;
+}
+.delhi{
+    width: auto;
+    display: flex;
+}
+.delhi img{
+    width: 25px;
+    height: 25px;
+
+    position: relative;
+    bottom: 2px;
+
+    
+
+}
+.loc2 h3{
+    font-size: 5px;
+}
+.loc2 p{
+    font-size: 5px;
+}
+.kolkata{
+    width: auto;
+    display: flex;
+}
+.kolkata img{
+    width: 25px;
+    position: relative;
+    bottom: 8.5px;
+}
+.kolkata h3{
+    font-size: 5px;
+    margin-left: 2px;
+}
+.kolkata p{
+    font-size: 5px;
+    margin-left: 2px;
+}
+.locations2{
+    display: flex;
+}
+.goa{
+    display: flex;
+}
+.goa img{
+    width: 25px;
+    height: 20px;
+}
+.goa h3{
+    font-size: 5px;
+    margin-left: 2px;
+}
+.goa p{
+    font-size: 5px;
+    margin-left: 2px;
+}
+.pune{
+    display: flex;
+}
+.pune img{
+    width: 25px;
+    height: 20px;
+}
+.pune h3{
+    font-size: 5px;
+    margin-left: 2px;
+}
+.pune p{
+    font-size: 5px;
+    margin-left: 2px;
+}
+.mumbai{
+    display: flex;
+}
+.mumbai img{
+    width: 25px;
+    height: 20px;
+}
+.mumbai h3{
+    font-size: 5px;
+    margin-left: 2px;
+}
+.mumbai p{
+    font-size: 5px;
+    margin-left: 2px;
+}
+.locations3{
+    display: flex;
+    margin-top: 3px;
+}
+.chennai{
+    display: flex;
+}
+.chennai img{
+    width: 25px;
+    height: 20px;
+}
+.chennai h3{
+    font-size: 5px;
+    margin-left: 2px;
+}
+.chennai p{
+    font-size: 5px;
+    margin-left: 2px;
+}
+.banglore{
+    display: flex;
+}
+.banglore img{
+    width: 25px;
+    height: 20px;
+    
+}
+.banglore h3{
+    font-size: 5px;
+    margin-left: 2px;
+}
+.banglore p{
+    font-size: 5px;
+    margin-left: 2px;
+}
+.jaipur{
+    display: flex;
+}
+.jaipur img{
+    width: 25px;
+    height: 20px;
+}
+.jaipur h3{
+    font-size: 5px;
+    margin-left: 2px;
+}
+.jaipur p{
+    font-size: 5px;
+    margin-left: 2px;
+}
+.offers{
+    background-color: rgb(0, 0, 0);
+    padding: 25px;
+    box-sizing: border-box;
+    position: relative;
+    margin: auto;
+    
+}
+.flightoffers{
+    display: flex;
+
+}
+.flightoffers h1{
+        font-size: 15px;
+        color: aliceblue;
+        text-align: start;
+
+}
+.form1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    }
+.flightoffers p{
+    font-size: 15px;
+    color: rgb(46, 103, 153);
+    text-align: start;
+    margin-left: 2px;
+
+}
+
+.offer1{
+    border: 1px solid #000000; 
+    border-radius: 0px;
+    padding: auto; 
+    width: 120px; 
+    display: flex;
+   
+
+}
+.offer1 img{
+    width: 50px;
+    height: 50px;
+   
+}
+
+.offer1 p{
+    font-size: 7px;
+    color: rgb(255, 254, 254);
+    margin-top: 15px;
+   
+}
+
+.offer2{
+    border: 1px solid #000000; 
+    border-radius: 0px;
+    padding: auto; 
+    width: 120px; 
+    display: flex;
+    margin-left: 2px;
+}
+
+.offer3{
+    border: 1px solid #000000;
+    border-radius: 0px;
+    padding: auto;
+    width: 120px;
+    display: flex;
+    margin-left: 2px;
+}
+.offer2 img{
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 2px;
+}
+.offer2 p{
+    font-size: 7px;
+    margin-left: 2px;
+    margin-top: 15px;
+    color: rgb(255, 255, 255);
+}
+.offer3 p{
+    font-size: 7px;
+    color: rgb(255, 255, 255);
+    margin-top: 15px;
+}
+.offer3 img{
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 3px;
+
+}
+.offersection{
+    display: flex;
+}
+.places{
+    background-color: #000000;
+    padding: auto;
+    height: 35px;
+    max-width: 100%;
+    position: relative;
+}
+.highlight1000{
+color: red;
+font-size: 14px;
+text-align: center;
+padding-left:5px;
+font-weight: 800;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.ramp p{
+    margin-left: 2px;
+    font-size: 8px;
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 200;
+}
+.ramp{
+    border-bottom: 1px solid;
+}
+.sbi-offer{
+color: red;
+font-size: 14px;
+text-align: center;
+padding-left:115px;
+font-weight: 800;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.sbi p{
+    margin-left: 2px;
+    font-size: 8px;
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 200;
+}
+.sbi{
+    border-bottom: 1px solid;
+}
+.wtsup{
+    color: red;
+font-size: 14px;
+text-align: center;
+/* padding-left:115px; */
+font-weight: 800;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.studentoffer p{
+    margin-left: 2px;
+    font-size: 8px;
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 200;
+}
+.bewdee h1{
+    text-align: center;
+    color: red;
+    font-size: 15px;
+    font-weight: 10000;
+    font-style: normal;
+    font-variant:normal;
+}
+.bewdee p{
+    color: rgb(0, 0, 0);
+    font-size: 10px;
+    font-weight: 10000;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#toLocation{
+    font-size: 15px;
+    color: darkred;
+    font-weight: bold;
+    font-style:oblique;
+}
+#airportName{
+    font-size: 15px;
+    color: darkred;
+    font-weight: bold;
+    font-style:oblique;
+}
+#airportDestinationName{
+    font-size: 15px;
+    color: darkred;
+    font-weight: bold;
+    font-style:oblique;
+}
+
+.box {
+    display: none;
+    background-color: #ffffff;
+    padding: 3px;
+    margin-top: 20px;
+    background: linear-gradient(rgba(9,0,77,0.165),rgba(9,0,77,1.5));
+    border-radius: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  #select-box {
+    padding: 5px;
+    margin-top: 5px;
+    margin-left: 155px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    font-size: 10px;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  #select-box:hover {
+    background-color: #f0f0f0;
+  }
+  
+  #select-box:focus {
+    border-color: #0056b3;
+  }
+  .randa h1{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 15px;
+  }
+  .randa input{
+    font-size: 10px;
+    border: none;
+    padding: 3px;
+    outline: none;
+    margin-left: 50px;
+  }
+  .randa button{
+    align-items: center;
+    margin-left: 185px;
+    margin-top: 3px;
+  }
+  #qrCodeContainer {
+    opacity: 0; /* Initially hide the QR code container */
+    transition: opacity 0.5s ease; /* Add transition effect */
+  }
+  
+  #qrCodeContainer.show {
+    opacity: 1; /* Show the QR code container when the 'show' class is applied */
+  }
+  #qrCodeContainer img{
+    width: 150px;
+    height: 150px;
+    margin-left: 125px;
+  }
+  .joker label{
+    font-size: 6px;
+
+  }
+  .joker input{
+    border: none;
+    outline: none;
+    background-color: rgba(255,255,255,0);
+    border-bottom:1px solid #000000;
+    width: auto;
+    height: auto;
+  }
+  .joker button{
+    font-size: 8px;
+    width: auto;
+    height: 13px;
+  }
+  .joker2{
+    display: flex;
+  }
+  .joker3 label{
+    font-size: 6px;
+
+  }
+  .joker3 input{
+    border: none;
+    outline: none;
+    background-color: rgba(255,255,255,0);
+    border-bottom:1px solid #000000;
+    width: auto;
+    height: auto;
+  }

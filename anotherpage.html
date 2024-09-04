@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="header1">
+        <div class="logo">
+            <img src="r.png" alt="Logo" width="45px">
+        <!-- <div class="container">
+            <div class="flight">
+            <span><i class="fa-solid fa-plane-departure"> <br>Flights</i></span>
+            </div>
+            <div class="train">
+                <span><i class="fa-solid fa-train"> <br>Trians</i></span>
+            </div>
+                <div class="bus">
+                    <span><i class="fa-solid fa-bus"> <br>Bus</i></span>
+                </div>
+                    <div class="car">
+                        <span><i class="fa-solid fa-car"> <br>Car</i></span>
+                    </div>
+                    
+                </div> -->
+            </div>
+</div>
+<div class="youbooked">
+    <div class="youbookedfrom">
+        <!-- <h1>FROM</h1> -->
+        <img src="117601-200aaa.png">
+        <p>Hyderabad</p>
+    </div>
+    <div class="endukooo">
+        <img src="asdfghj.png">
+    </div>
+    <div class="youbookedto">
+        <!-- <h1>TO</h1> -->
+        <img src="fea3372d16864dfea49336de06c5b2b05ce25b05.png">
+        <p>GOA</p>
+    </div>
+    <div class="sodhi">
+        
+        <p>Scroll Down For Choosing your<br><Span class="umma">REQUIRED FLIGHTS</Span></p>
+        <img src="OIP (3).jpeg">
+    </div>
+</div>
+
+    <main>
+        
+    </main>
+
+
+
+    
+</body>
+<script>
+
+    
+    var jsonData =JSON.parse( localStorage.getItem('from'));
+    console.log(jsonData);
+    // var receivedData = JSON.parse(jsonData);
+
+// Display the contents of the received object
+console.log(jsonData);
+function generateListItems(arg){
+    let items="";
+    for(let i=0;i<arg.length;i++){
+
+        // items+=`<li id='list${i}'>`
+        // items+=`<div class='min'>`
+        items+=`<div class='min${i}'>`
+        items+=`<tr onClick=getIndex(this)>`
+        items += `<td><p class="string1">${arg[i].airportName}</p></td>`
+        items += `<td><p class="string1">${arg[i].airportDestinationName}</p></td>`
+        items += `<td><p class="string1">${arg[i].flightCode}</p></td>`
+        items += `<td><p class="string1">${arg[i].departureTime}</p></td>`
+        items += `<td><p class="string1">${arg[i].arrivalTime}</p></td>`
+        items += `<td><p class="string1">${arg[i].amount}</p></td>`
+        // items += `<td><p class="string1">${arg[i].fromLocation}</p></td>`
+        // items += `<td><p class="string1">${arg[i].toLocation}</p></td>`
+        items += `<td><button class="btn"><a href="login.html">Book Now</a></button></td>`
+        items+=`</tr>`
+        items+=`</div>`
+        // items+=`</div>`
+        // items+=`<br/>`
+        // items+=`</li>`
+
+        // + arg[i].arrivalTime  + arg[i].departureTime + arg[i].amount}</div>`;
+    
+}
+    return items;
+}
+document.querySelector("main").innerHTML=`<div class='min1'>
+    <table id="table">
+        
+        
+        
+        
+    ${generateListItems(jsonData)}
+</table>
+    </div>`;
+    // document.getElementById('Amount').innerHTML=jsonData.amount;
+    // document.getElementById('FlightName').innerHTML=jsonData.airportName;
+    // document.getElementById('Flightcode').innerHTML=jsonData.flightCode;
+    // document.getElementById('FlightTime').innerHTML=jsonData.arrivalTime;
+    // document.getElementById('ArrivalTime').innerHTML=jsonData.arrivalTime;
+    // document.getElementById('DepartureTime').innerHTML=jsonData.departureTime;
+        // Access object[key] here
+        document.querySelectorAll('btn')
+
+
+
+function getIndex(x){
+    // document.getElementById()
+    console.log(x.cells[0].innerText);
+    let airportName=x.cells[0].innerText;
+    console.log(x.cells[1].innerText);
+    let airportDestinationName=x.cells[1].innerText;
+    console.log(x.cells[2].innerText);
+    let flightCode=x.cells[2].innerText;
+    console.log(x.cells[3].innerText);
+    let departureTime=x.cells[3].innerText;
+    console.log(x.cells[5].innerText);
+    let amount=x.cells[5].innerText;
+    console.log(x.cells[6].innerText);
+    let fromLocation=x.cells[6].innerText;
+    console.log(x.cells[7].innerText);
+    let toLocation=x.cells[7].innerText;
+    localStorage.setItem("airportName",airportName);
+    localStorage.setItem("airportDestinationName",airportDestinationName);
+    localStorage.setItem("flightCode",flightCode);
+    localStorage.setItem("departureTime",departureTime);
+    localStorage.setItem("amount",amount);
+    localStorage.setItem("fromLocation",fromLocation);
+    localStorage.setItem("toLocation",toLocation);
+
+
+            
+// console.log("Stored Data:", storedData);
+}
+
+    
+    
+    var data=localStorage.getItem('from');
+
+    const itemlist=document.querySelectorAll('.min0');
+
+    console.log(itemlist);
+    itemlist.forEach(bt=>{
+        bt.addEventListener('click',(e)=>{
+            console.log(e.target);
+            let value=this.closest('min1').querySelector('min0:first-child').textContent;
+            console.log(value);
+        })
+    })
+    
+    // itemlist.addEventListener('click',(event)=>{
+    //     // if (event.target.tagName.toLowerCase==='button'){
+    //         const button=event.target;
+    //         const item=button.dataset;
+    //     // }
+    // })
+</script>
+</html>
